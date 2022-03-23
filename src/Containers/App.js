@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import classes from './App.module.css';
 import CustomerList from './CustomerList/CustomerList';
 import Filter from '../Components/Util/FilterItem/Filter';
-import TableHeader from '../Components/Util/TableHeader/TableHeader';
 import SearchInput from '../Components/Util/SearchInput/SearchInput';
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
     sortByDate: false,
     orderBy: "asc",
     statuses: ['Filter'],
-    selectedStatus: ""
+    selectedStatus: "",
   }
 
   componentDidMount(){
@@ -46,20 +46,29 @@ class App extends Component {
     this.setState({selectedStatus: event.target.value});
   }
 
+  sortHandler = order => {
+    this.setState({sortByDate: true});
+    this.setState({orderBy: order}); 
+  }
+
+  setShowingState = number => {
+    this.setState({showing: number});
+  }
+
   render(){
     return(
-      <div>
-        <div>
+      <div className = {classes.main}>
+        <div className = {classes.searchContainer}>
           <SearchInput search = {this.searchHandler} value = {this.state.searchQuery}/>
           <Filter status = {this.state.statuses} setStatus = {this.setStatusHandler}/>
         </div>
-        <TableHeader/>
         <CustomerList 
           data = {this.state.customers} 
           query = {this.state.searchQuery}
           sort = {this.state.sortByDate}
           orderBy = {this.state.orderBy}
-          status = {this.state.selectedStatus}/>
+          status = {this.state.selectedStatus}
+          sortHandle = {this.sortHandler}/>
       </div>
     );
   }

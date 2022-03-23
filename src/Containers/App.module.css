@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titillium+Web&display=swap');
+
+.main{
+    /* height: 99vh; */
+    width: 99vw;
+    margin: 0px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.searchContainer{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 30px;
+    margin-top: 40px;
+}

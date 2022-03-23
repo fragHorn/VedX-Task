@@ -3,7 +3,7 @@ import classes from './Filter.module.css';
 
 const filter = props => {
     return (
-        <select onChange={props.setStatus}>
+        <select className = {classes.filters} onChange={props.setStatus}>
             {props.status.map(s => {
                 return <option key = {s} value = {s}>{s}</option>
             })}

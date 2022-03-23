@@ -1,0 +1,75 @@
+.customer{
+    width: 100%;
+    display: flex;
+    /* justify-content:space-between; */
+    align-items: center;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    font-size: 0.8rem;
+}
+
+.orderId{
+    width: 10%;
+    padding-left: 2%;
+    margin-left: 3%;
+    /* box-sizing: border-box; */
+    font-weight: bold;
+    /* border: 1px solid black; */
+}
+
+.name{
+    width: 15%;
+    margin-left: 3%;
+    /* box-sizing: border-box; */
+    /* font-weight: 500; */
+    /* border: 1px solid black; */
+}
+
+.address{
+    width: 20%;
+    padding-left: 2%;  
+    margin: 1% 0% 1% 1%;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+
+.product{
+    width: 20%;
+    padding-left: 2%;  
+    margin-left: 1%;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+
+.date{
+    width: 10%;
+    margin-left: 2%;
+}
+
+.status{
+    /* width: %; */
+    margin-left:1.5%;
+    padding: 10px;
+    /* border:1px solid grey; */
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.Delivered{
+    background-color: rgba(218, 218, 253, 0.253);
+    color: rgba(189, 107, 228, 0.753);
+}
+
+.Completed{
+    background-color: rgba(201, 253, 219, 0.37);
+    color: rgba(107, 228, 113, 0.753);
+}
+
+.Prepared{
+    background-color: rgba(253, 235, 201, 0.37);
+    color: rgba(228, 186, 107, 0.753);
+}
+
+.Prepone{
+    background-color: rgba(253, 201, 227, 0.37);
+    color: rgba(228, 107, 182, 0.753);
+}

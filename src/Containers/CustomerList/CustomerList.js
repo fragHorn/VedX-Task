@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import classes from './CustomerList.module.css';
+import TableHeader from '../../Components/Util/TableHeader/TableHeader';
 import Customers from '../../Components/Customers/Customers';
 
 class CustomerList extends Component{
@@ -59,8 +61,12 @@ class CustomerList extends Component{
             />}
         );
 
+
         return(
-            <div>
+            <div className = {classes.outerDiv}>
+                <TableHeader 
+                    sortHandle = {this.props.sortHandle}
+                    orderBy = {this.props.orderBy}/>
                 {customers}
             </div>
         );
